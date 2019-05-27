@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from nowstagram import app
+'''from nowstagram import app
 from qiniu import Auth, put_stream, put_data
 import os
 
@@ -22,4 +22,4 @@ def qiniu_upload_file(source_file, save_file_name):
     print type(info.status_code), info
     if info.status_code == 200:
         return domain_prefix + save_file_name
-    return None
+    return None'''

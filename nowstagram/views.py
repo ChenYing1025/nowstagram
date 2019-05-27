@@ -5,7 +5,7 @@ from models import Image, User, Comment
 from flask import render_template, redirect, request, flash, get_flashed_messages, send_from_directory
 import random, hashlib, json, uuid, os
 from flask_login import login_user, logout_user, current_user, login_required
-from qiniusdk import qiniu_upload_file
+#from qiniusdk import qiniu_upload_file
 
 
 @app.route('/index/images/<int:page>/<int:per_page>/')
@@ -176,8 +176,8 @@ def save_to_local(file, file_name):
     file.save(os.path.join(save_dir, file_name))
     return '/image/' + file_name
 
-def save_to_qiniu(file, file_name):
-    return qiniu_upload_file(file, file_name)
+#def save_to_qiniu(file, file_name):
+    #return qiniu_upload_file(file, file_name)
 
 def save_to_local(file, file_name):
     save_dir = app.config['UPLOAD_DIR']
